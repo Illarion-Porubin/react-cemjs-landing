@@ -1,0 +1,166 @@
+// @import 'utils/variables.scss';
+// @import 'utils/globalClass.scss';
+
+.footer {
+    &_inner {
+        width: 100%;
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_info {
+    }
+    .note {
+    }
+    &_note {
+        width: 261px;
+        height: 28px;
+        color: #4C40F7;
+    }
+    &_title {
+        font-family: "FuturaDemi";
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 108%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #333;
+    }
+    &_text {
+        font-family: "FuturaBook";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+        text-align: center;
+        color: #4f4f4f;
+    }
+    &_slider {
+    }
+}
+
+// & {
+//   &_inner {
+//     display: flex;
+//     flex-direction: column;
+//     border-radius: var(--borderR);
+//     background: linear-gradient(358deg, #212328 26.61%, #363D42 106.65%);
+//   }
+
+//   &_logo {
+//     height: 100px;
+
+//     img {
+//       height: 100%;
+//     }
+//   }
+
+//   &_link {
+//     background: #545C65;
+//     border-radius: 50%;
+//     width: 3.5rem;
+//     height: 3.5rem;
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-pack: center;
+//     -ms-flex-pack: center;
+//     justify-content: center;
+//     -webkit-box-align: center;
+//     -ms-flex-align: center;
+//     align-items: center;
+//   }
+
+//   &_main {
+//     padding: 3rem 4vw;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     gap: 2.5vw;
+//     border-bottom: 1px solid #EFF2F5;
+//   }
+
+//   &_down {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 2rem 4vw;
+//     gap: 2rem;
+
+//     &__link{
+//       text-align: center;
+//       color: inherit;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       &-text{
+//         font-weight: 400;
+//       }
+//     }
+
+//     &__icon {
+//       width: 25px;
+//       margin-left: 10px;
+//     }
+//   }
+
+//   &_socials {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 15px;
+//     place-items: center;
+//   }
+
+//   &_link {
+//     color: var(--white);
+//     font-size: clamp(14px, 2.5vw, 16px);
+//   }
+// }
+
+// @media(max-width: 910px) {
+//   & {
+//     &_main {
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//       place-items: center;
+//     }
+//   }
+// }
+
+// @media(max-width: 680px) {
+//   & {
+//     &_logo {
+//       height: 60px;
+//     }
+//   }
+// }
+
+// @media(max-width: 570px) {
+//   & {
+//     &_main {
+//       gap: 5vw;
+//     }
+//     &_down{
+//       flex-direction: column;
+//     }
+//   }
+// }
+
+// @media(max-width: 464px) {
+//   & {
+//     &_logo {
+//       height: 50px;
+//     }
+
+//     &_main {
+//       grid-template-columns: 1fr 1fr;
+//       place-items: center;
+//     }
+
+//     &_socials {
+//       grid-template-columns: repeat(2, 1fr);
+//       grid-template-rows: repeat(3, 1fr);
+//       width: 100%;
+//     }
+//   }
+// }

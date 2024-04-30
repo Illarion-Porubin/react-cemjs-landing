@@ -1,0 +1,40 @@
+//colors
+:root {
+  --white: #FFFFFF;
+  --black: #191B21;
+  --green: #BAEDB2;
+  --red: #F81A1A;
+  --red_orange: #FF561D;
+  --orange: #D39768;
+  --light: #EFF2F5;
+  --fiolet: #8771CC;
+  --fiolet_light: #C070FF;
+  --fiolet_black: #31245E;
+  --yellow: #EAD15E;
+  --grey: #D9D9D9;
+  --back_modal: #202432;
+  --bg_gradient: linear-gradient(358deg, #212328 26.61%, #363D42 106.65%);
+  --circle_gradient: linear-gradient(215deg, #e99b67 29.9%, #a2ef9a 80%);
+  --text_gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0), #212328 80%);
+  // --radial_gradient: radial-gradient(circle 50% 50%, #BAEDB2, transparent);
+  --radial_gradient: radial-gradient(ellipse 50% 50%, #BAEDB2, transparent);
+
+  // transition
+  --tran-03: all .3s ease-in-out;
+  --tran-05: all .5s ease-in-out;
+  --tran-015: all .15s ease-in-out;
+
+  --gap: 2vw;
+  --padding: 3vw;
+  --mb: 1.5vw;
+  --borderR: clamp(1.5rem, 3vw, 2.8rem);
+  --btnBorderR: clamp(1rem, 3vw, 1.25rem);
+  --title: clamp(0.6rem, 3.5vw, 2.8rem);
+}
+
+@media(max-width: 535px) {
+  :root {
+    --padding: 5vw;
+    --gap: 3vw;
+  }
+}

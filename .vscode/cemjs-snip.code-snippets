@@ -1,0 +1,19 @@
+{
+	"Print to console": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "cjf",
+		"body": [
+			"import { Cemjsx, Static, Ref, Fn, front, Func } from 'cemjs-all'",
+			"",
+			"export default function() {",
+			"",
+			"  return (",
+			"    <section class='' id=''>",
+			"        <div class=''>${1:${TM_FILENAME_BASE}}</div>",
+			"    </section>",
+			"  )",
+			"}"
+		],
+		"description": "Log output to console"
+	}
+}
