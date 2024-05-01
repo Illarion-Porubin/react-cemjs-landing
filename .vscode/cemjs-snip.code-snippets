@@ -8,8 +8,8 @@
 			"export default function() {",
 			"",
 			"  return (",
-			"    <section class='' id=''>",
-			"        <div class=''>${1:${TM_FILENAME_BASE}}</div>",
+			"    <section class='${TM_FILENAME_BASE/(?:^|-|_|\\.)(\\w)/${1:/downcase}/g}' id='${TM_FILENAME_BASE/(?:^|-|_|\\.)(\\w)/${1:/downcase}/g}'>",
+			"        <div>${1:${TM_FILENAME_BASE}}</div>",
 			"    </section>",
 			"  )",
 			"}"

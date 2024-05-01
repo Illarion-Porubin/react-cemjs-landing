@@ -15,33 +15,405 @@
 	background-size: cover;
 	background-position: bottom;
 	background-repeat: no-repeat;
-	padding-left: 5%;
 
 	&_content {
-		width: 672px;
+		display: block;
+		max-width: 672px;
 		height: auto;
 	}
 
-	&_title {
-		font-size: 60px;
-		margin-bottom: 48px;
-		font-weight: 600;
-		font-size: 60px;
-		color: #333;
-		font-family: "FuturaDemi";
+	&_title{
+		margin-bottom: 58px;
 	}
 
 	&_text {
-		max-width: 540px;
 		margin-bottom: 58px;
-		font-weight: 400;
-		font-size: 24px;
-		color: #4f4f4f;
-		font-family: "FuturaBook";
 	}
 }
 
-// ===CASS
+
+// ===CASS===
+
+.cases {
+	width: 100%;
+	height: 100dvh;
+	&_content {
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	&_info {
+		max-width: 517px;
+		margin-bottom: 108px;
+	}
+
+	&_item_list {
+		width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		gap: 20px;
+	}
+
+	&_item {
+		max-width: 568px;
+		max-height: 638px;
+		border-radius: 20px;
+		position: relative;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+
+	&_item_title{
+		font-size: clamp(1rem, 4vw, 36px) !important;
+	}
+
+	&_item_text{
+		font-size: clamp(1rem, 3vw, 24px) !important;
+	}
+
+	&_item_img_wrap {
+		padding: 12%;
+		width: 100%;
+		max-height: 426px;
+		border-radius: 20px 20px 0 0;
+	}
+
+	&_item_img_wrap.first {
+		background: #fff3eb;
+	}
+
+	&_item_img_wrap.last {
+		background-color: #ededff;
+	}
+
+	&_item_img {
+		width: 100%; // сделать адаптивный контейнер
+		height: auto;
+		margin: 0 auto;
+		border-radius: 8px;
+	}
+
+	&_item_title {
+		font-family: "FuturaDemi";
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 133%;
+		letter-spacing: 0em;
+		margin-bottom: 8px;
+		color: #333;
+	}
+
+	&_item_text {
+		font-family: "FuturaBook";
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 0%;
+		color: #6b6b6b;
+	}
+
+	&_item_desc {
+		width: 100%;
+		height: 100%;
+		padding: 12%;
+	}
+}
+
+@media(max-width: 800px){
+	.cases{
+		&_item_list{
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);		
+		}
+		&_item{
+			margin: 0 auto;
+		}
+	}
+}
+
+// ===OFER===
+
+.ofer {
+	width: 100%;
+	height: auto;
+	position: relative;
+
+	&_ellipseBg{
+		position: absolute;
+		left: 0;
+		top: 12%;
+		z-index: -1;
+	}
+
+	&_info {
+		width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	&_info_note {
+		margin-bottom: 28px;
+	}
+
+	&_info_title {
+		margin-bottom: 34px;
+	}
+
+	&_info_text {
+		margin-bottom: 86px;
+	}
+
+	&_items {
+		width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(280px, 500px));
+		grid-template-rows: repeat(2, minmax(380px, 44vw));
+		gap: 40px;
+		justify-content: center;
+	}
+	&_item {
+		max-width: 500px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #fff;
+		padding: 16%;
+		border: 1px solid #e3e6e9;
+		border-radius: 40px;
+		transition: all 0.3s;
+		&:hover {
+			background-color: #4c40f7;
+			transition: all 0.3s;
+			h2,
+			p {
+				color: #fff;
+			}
+			.btnJet__blue {
+				background-color: #fff;
+				color: #4c40f7;
+			}
+		}
+	}
+
+	&_item_title{
+		font-family: "FuturaMedium" !important;
+	}
+
+	@media(max-width:800px) {
+		.ofer{
+			&_items{
+				gap: 20px;
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(2, minmax(380px, 44vw));
+			}
+			&_item{
+				margin: 0 auto;
+				height: 380px;
+				padding: 8%;
+			}
+		}
+	}
+
+	@media(max-width:400px){
+		.ofer{
+			&_item{
+				padding: 14%;
+			}
+			&_item_text{
+				margin: 30px 0;
+			}
+		}
+	}
+}
+
+// ===WEWORK===
+
+.work {
+	width: 100%;
+	height: 100dvh;
+	background-image: url("images/workBG.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&_content {
+		width: 100%;
+		height: 100dvh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&_slide {
+		width: 150px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&_slide_pages {
+		display: flex;
+	}
+	&_slide_line {
+		width: 40px;
+		height: 1px;
+		display: block;
+		background-color: #fff;
+		margin: 0 26px;
+	}
+	&_slide_page {
+		font-family: "FuturaDemi";
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.03em;
+		color: #fff;
+		position: relative;
+		top: -8px;
+	}
+
+	&_slide_btn {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+	&_info_wrap {
+		margin-left: 50px;
+	}
+	&_info {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 530px;
+		margin-bottom: 140px;
+	}
+	&_info_title {
+		color: #fff;
+	}
+	&_info_text {
+		color: #fff;
+	}
+	&_items {
+		display: flex;
+	}
+	&_item {
+		max-width: 324px;
+		height: auto;
+		margin-right: 100px;
+	}
+
+	&_item:last-child {
+		margin-right: 0;
+	}
+	&_item_title {
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 140%;
+		letter-spacing: -0.04em;
+		color: #fff;
+		margin-bottom: 30px;
+	}
+	&_item_text {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: #939396;
+	}
+}
+
+// ===solutins===
+
+.solutions {
+	width: 100%;
+	height: auto;
+	margin-bottom: 0;
+
+	&_content {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&_info {
+		max-width: 400px;
+		text-align: center;
+		margin-bottom: 234px;
+	}
+
+	&_info_title {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 141%;
+		text-align: center;
+		color: #333;
+	}
+
+	&_list_item{
+		margin-bottom: 130px;
+	}
+
+	&_item {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-height: 590px;
+		margin-bottom: 184px;
+	}
+	&_item:nth-child(even){
+		.solutins_item_info{
+			order: 1;
+		}
+	}
+
+	&_item_info {
+		width: 40%;
+		height: 100%;
+	}
+
+	&_item_title {
+		margin-bottom: 36px;
+	}
+
+	&_item_text {
+		margin-bottom: 61px;
+		max-width: 446px;
+	}
+
+	&_item_images_wrap{
+		max-width: 480px;
+		height: auto;
+	}
+
+	&_item_images {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	&_item_image_back {
+		max-width: 452px;
+		max-height: 530px;
+	}
+
+	&_item_image_front {
+		position: absolute;
+		border-radius: 14px;
+		min-width: 276px;
+		max-height: 305px;
+		bottom: -50px;
+		right: -50px;
+		box-shadow: -16px 14px 30px 0 rgba(0, 0, 0, 0.25);
+	}
+}
 
 // ===PRESA===
 // .presa {

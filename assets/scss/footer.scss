@@ -2,41 +2,32 @@
 // @import 'utils/globalClass.scss';
 
 .footer {
+    margin-bottom: 0;
+    background-color: #fff;
+    padding: 16% 0;
     &_inner {
         width: 100%;
-        height: 100dvh;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        text-align: center;
     }
     &_info {
+        max-width: 593px;
+        height: auto;
     }
-    .note {
+
+    &_parners {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12%;
     }
-    &_note {
-        width: 261px;
-        height: 28px;
-        color: #4C40F7;
-    }
-    &_title {
-        font-family: "FuturaDemi";
-        font-weight: 600;
-        font-size: 72px;
-        line-height: 108%;
-        letter-spacing: -0.01em;
-        text-align: center;
-        color: #333;
-    }
-    &_text {
-        font-family: "FuturaBook";
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 140%;
-        text-align: center;
-        color: #4f4f4f;
-    }
-    &_slider {
-    }
+    
 }
 
 // & {

@@ -16,7 +16,7 @@ front.loader = () => {
 
 front.display = () => {
     return (
-        <footer class="section footer">
+        <footer class="section footer" id="footer">
             <div class="wrapper">
                 <Navigation />
             </div>

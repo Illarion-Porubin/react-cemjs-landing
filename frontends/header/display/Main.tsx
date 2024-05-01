@@ -99,7 +99,7 @@ export default function () {
       </nav>
       <div class="header_btns">
         <button
-          class="btnJet btnJet__orange"
+          class="header_btn btnJet btnJet__orange"
           onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}
         >
           Get ballpark estimate
@@ -129,7 +129,7 @@ export default function () {
         <RenderMobileMenu items={menu} />
         <div class="header_mobile-details">
           <button
-            class="btn btn__green"
+            class="btn btn__black"
             onclick={() => {
               front.Variable.openSidebar = false;
               Fn.initOne("modalWebinar", {

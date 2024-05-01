@@ -7,6 +7,39 @@
   margin-bottom: 7vh;
 }
 
+// jet container
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+// jet note
+
+.note {
+  font-family: "FuturaDemi";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #4c40f7;
+  display: block;
+
+  &__left {
+    text-align: left;
+  }
+
+  &__center {
+    text-align: center;
+  }
+
+  &__right {
+    text-align: right;
+  }
+}
+
+// jet btn
+
 .btnJet {
   cursor: pointer;
   padding: 1.4rem 2.5rem;
@@ -16,29 +49,71 @@
   border-radius: 20px;
   font-family: "FuturaDemi";
   font-weight: 700;
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(10px, 1vw, 20px);
   line-height: 130%;
   text-align: center;
   color: var(--white);
-  border: 0.06rem solid var(--fiolet_light);
-  transition: all .3s;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  &:hover {
+    background: #fff;
+  }
 
   &__orange {
     background: var(--red_orange);
-    transition: all .3s;
-    &:hover{
-      box-shadow: 1px 1px 10px 1px var(--red_orange);
+    transition: all 0.3s;
+    &:hover {
+      color: var(--red_orange);
+      border: 2px solid var(--red_orange);
+      box-shadow:
+        0 48px 48px 0 rgba(0, 0, 0, 0.12),
+        0 14px 20px 0 rgba(35, 34, 87, 0.4);
     }
   }
 
   &__blue {
-    background: #4C40F7;
-    transition: all .3s;
-    &:hover{
-      box-shadow: 1px 1px 10px 1px #4C40F7;
+    background: #4c40f7;
+    transition: all 0.3s;
+    &:hover {
+      color: #4c40f7;
+      border: 2px solid #4c40f7;
+      box-shadow:
+        0 48px 48px 0 rgba(0, 0, 0, 0.12),
+        0 14px 20px 0 rgba(35, 34, 87, 0.4);
     }
   }
+
+  @media (max-width: 900px) {
+    font-size: clamp(10px, 1vw, 10px);
+  }
 }
+
+// jet title
+
+.title {
+  font-family: "FuturaDemi";
+  font-weight: 600;
+  font-size: clamp(1.5rem, 6vw, 72px);
+  color: #333;
+}
+
+// jet text
+
+.text {
+  font-family: "FuturaBook";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 0%;
+  color: #4f4f4f;
+}
+
+@media(max-width: 800px){
+  .text{
+    font-size: clamp(1rem, 2vw, 24px);
+  }
+}
+
+/////////////////////////////////////////////
 
 .btn {
   cursor: pointer;
@@ -578,11 +653,5 @@
         background-color: var(--black);
       }
     }
-  }
-}
-
-@media (max-width: 535px) {
-  .text {
-    font-size: 14px;
   }
 }
