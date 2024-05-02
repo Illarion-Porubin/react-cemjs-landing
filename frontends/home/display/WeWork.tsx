@@ -1,21 +1,41 @@
-import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all";
+import { Cemjsx } from "cemjs-all";
 import workIcon1 from "@images/workIcon1.png";
 import workIcon2 from "@images/workIcon2.png";
 
+
 export default function () {
+  const slides = document.querySelectorAll('.slide');
+  // const sliderWidth = slides.clientWidth; //(clientWidth, offsetWidth) не находит
+
+
+  const prev = (index: number) => {
+    slides[index].classList.add('active');
+    if(index >=0){
+      console.log(index);
+      slides[ index+=1].classList.remove('active');
+    }
+  }
+
+  const next = (index: number) => {
+    if((index <= (slides.length - 1))){
+      slides[index].classList.add('active');
+    }
+    slides[index-=1].classList.remove('active');
+  }
+
   return (
     <section class="section work" id="work">
-      <div class="containder">
+      <div class="container">
         <div class="work_content">
-          <div class="work_slide">
-            <h4>How we work</h4>
+          <div class="work_slider_menu">
+            <h4 class="work_slide_title title">How we work</h4>
             <div class="work_slide_pages">
               <span class="work_slide_page curent">1</span>
               <span class="work_slide_line"></span>
               <span class="work_slide_page next">2</span>
             </div>
             <div class="work_slide_buttons">
-              <button class="work_slide_btn left">
+              <button class="work_slide_btn left" onclick={() => prev(0)}>
                 <svg
                   width="40"
                   height="40"
@@ -47,7 +67,7 @@ export default function () {
                   />
                 </svg>
               </button>
-              <button class="work_slide_btn right">
+              <button class="work_slide_btn right" onclick={() => next(1)}>
                 <svg
                   width="40"
                   height="40"
@@ -82,30 +102,71 @@ export default function () {
               </button>
             </div>
           </div>
-          <div class="work_info_wrap">
-            <div class="work_info">
-              <h2 class="work_info_title title">Visualising our processes.</h2>
-              <p class="work_info_text text">
-                Your idea starts now, without any delays or unnecessary
-                paperwork.
-              </p>
-            </div>
-            <div class="work_items">
-              <div class="work_item">
-                <img src={workIcon1} alt="workIcon1" />
-                <h2 class="work_item_title title">Code Review</h2>
-                <p class="work_item_text text">
-                  If you have a codebase of you own, we do estimate the costs
-                  and scale the approximate team accordingly.
-                </p>
+          <div class="slider">
+            <div class="slide active">
+              <div class="work_info_wrap">
+                <div class="work_info">
+                  <h2 class="work_info_title title">
+                    Visualising our processes.
+                  </h2>
+                  <p class="work_info_text text">
+                    Your idea starts now, without any delays or unnecessary
+                    paperwork.
+                  </p>
+                </div>
+                <div class="work_items">
+                  <div class="work_item">
+                    <img src={workIcon1} alt="workIcon1" />
+                    <h2 class="work_item_title title">Code Review</h2>
+                    <p class="work_item_text text">
+                      If you have a codebase of you own, we do estimate the
+                      costs and scale the approximate team accordingly.
+                    </p>
+                  </div>
+                  <div class="work_item">
+                    <img src={workIcon2} alt="workIcon2" />
+                    <h2 class="work_item_title title">
+                      Define & Estimate tasks
+                    </h2>
+                    <p class="work_item_text text">
+                      All of the business & technical questions will be
+                      carefully examined and estimated within the first week.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="work_item">
-                <img src={workIcon2} alt="workIcon2" />
-                <h2 class="work_item_title title">Define & Estimate tasks</h2>
-                <p class="work_item_text text">
-                  All of the business & technical questions will be carefully
-                  examined and estimated within the first week.
-                </p>
+            </div>
+            <div class="slide">
+              <div class="work_info_wrap">
+                <div class="work_info">
+                  <h2 class="work_info_title title">
+                    Visualising our processes. 2
+                  </h2>
+                  <p class="work_info_text text">
+                    Your idea starts now, without any delays or unnecessary
+                    paperwork. 2
+                  </p>
+                </div>
+                <div class="work_items">
+                  <div class="work_item">
+                    <img src={workIcon1} alt="workIcon1" />
+                    <h2 class="work_item_title title">Code Review 2</h2>
+                    <p class="work_item_text text">
+                      If you have a codebase of you own, we do estimate the
+                      costs and scale the approximate team accordingly. 2
+                    </p>
+                  </div>
+                  <div class="work_item">
+                    <img src={workIcon2} alt="workIcon2" />
+                    <h2 class="work_item_title title">
+                      Define & Estimate tasks
+                    </h2>
+                    <p class="work_item_text text">
+                      All of the business & technical questions will be
+                      carefully examined and estimated within the first week. 2
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import { Cemjsx, Func, Ref } from "cemjs-all"
-import Main from "./display/Main"
+import { Cemjsx, Func, Ref } from "cemjs-all";
+import Main from "./display/Main";
 
 export default function () {
   return (

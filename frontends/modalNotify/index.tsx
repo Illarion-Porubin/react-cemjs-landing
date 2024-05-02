@@ -22,6 +22,7 @@ front.func.close = function () {
         front.Variable.$el.body.classList.remove('lock')
     }, 500)
 }
+
 front.loader = () => {
     return
 }

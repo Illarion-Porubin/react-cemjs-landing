@@ -15,7 +15,7 @@ export default function () {
       </main>
       <WeWork />
       <main class="wrapper">
-        {/* <Solutins/> */}
+        <Solutins/>
       </main>
     </div>
   );
